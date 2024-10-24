@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", serif;
+    background-color: #ff399c;
+    height: 250vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    overflow-y: scroll;
+    padding-top: 50px;
+    position: relative;
+}
+
+.container {
+    text-align: center;
+    background-color: #f7bebe;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    height: 95%;
+    position: relative;
+
+}
+
+h1 {
+    color: #ff6347;
+    font-size: 3em;
+    margin-bottom: 15px;
+    background: linear-gradient(to right, #ff8a00, #da1b60);
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: color-change 5s infinite;
+    /* Adding gradient color animation */
+}
+
+@keyframes color-change {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.birthday-photo {
+    width: 300px;
+    border-radius: 50%;
+    margin: 0 20px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    /* Smooth enlargement */
+}
+
+.birthday-photo.enlarged {
+    transform: scale(1.5) rotate(360deg);
+    /* Rotate and enlarge photo */
+    transition: transform 0.6s ease;
+}
+
+.balloon-photo {
+    width: 300px;
+    cursor: pointer;
+    animation: float 3s ease-in-out infinite;
+}
+
+.teks-happy {
+    width: 400px;
+    margin-top: 40px;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+p {
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.message {
+    margin-top: 20px;
+    font-size: 1.1em;
+    line-height: 1.6em;
+    font-weight: bold;
+}
+
+.message-2 {
+    margin-top: 40px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+/* Confetti styles */
+#confetti-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 999;
+}
+
+.confetti {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: red;
+    animation: fall 5s infinite;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-100%);
+    }
+
+    100% {
+        transform: translateY(100%);
+    }
+}
